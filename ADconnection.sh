@@ -230,7 +230,7 @@ else
 therealm=$(realm discover "$DOMAIN" | grep -i configured: | cut -d ':' -f2 | sed -e 's/^[[:space:]]*//')
 if [ "$therealm" = "no" ]
 then
-echo "Realm configured?.. ${RED_TEXT}FAIL${END}"
+echo "Realm configured?.. ${RED_TEXT}NO${END}"
 else
 echo "Realm configured?.. ${INTRO_TEXT}OK${END}"
 fi
@@ -471,7 +471,7 @@ else
 therealm=$(realm discover "$DOMAIN" | grep -i configured: | cut -d ':' -f2 | sed -e 's/^[[:space:]]*//')
 if [ "$therealm" = "no" ]
 then
-echo "Realm configured?.. FAIL"
+echo "Realm configured?.. NO"
 else
 echo "Realm configured?.. OK"
 fi
@@ -869,7 +869,7 @@ else
 therealm=$( realm discover | grep -i realm-name | awk '{print $2}')
 if [ "$therealm" = "no" ]
 then
-echo Realm configured?.. "${RED_TEXT}FAIL${END}"
+echo Realm configured?.. "${RED_TEXT}NO${END}"
 else
 echo Realm configured?.. "${INTRO_TEXT}OK${END}"
 fi
@@ -1323,7 +1323,7 @@ echo ""
 therealm=$( realm discover | grep -i configured | awk '{print $2}')
 if [ "$therealm" = "no" ]
 then
-echo Realm configured?.. "${RED_TEXT}FAIL${END}"
+echo Realm configured?.. "${RED_TEXT}NO${END}"
 else
 echo Realm configured?.. "${INTRO_TEXT}OK${END}"
 fi
@@ -1384,7 +1384,7 @@ echo ""
 therealm=$( realm discover | grep -i realm-name | awk '{print $2}')
 if [ "$therealm" = "no" ]
 then
-echo "Realm configured?.. FAIL"
+echo "Realm configured?.. NO"
 else
 echo "Realm configured?.. OK"
 fi
